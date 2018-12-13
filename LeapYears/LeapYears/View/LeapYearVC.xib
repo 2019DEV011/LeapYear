@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeapYearVC" customModule="LeapYears" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSubmit" destination="DYr-u1-7w5" id="AaK-ak-NzH"/>
+                <outlet property="txtFldYear" destination="4Z4-Eg-qUH" id="nUc-36-Hww"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36d-n0-4eO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Z4-Eg-qUH">
+                            <rect key="frame" x="98" y="173" width="179" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="h5F-v6-PTR"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="rTG-KA-TXt"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-u1-7w5">
+                            <rect key="frame" x="126" y="310" width="124" height="49"/>
+                            <color key="backgroundColor" white="0.78714285579999999" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="tT9-UY-jqc"/>
+                            </constraints>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="btnSubmitClick:" destination="-1" eventType="touchUpInside" id="bMN-vd-9zQ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Leap Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-jW-6oz">
+                            <rect key="frame" x="122" y="72" width="131.5" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="lfa-5V-bxt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="4Z4-Eg-qUH" firstAttribute="leading" secondItem="36d-n0-4eO" secondAttribute="leading" constant="98" id="2gS-CG-ECI"/>
+                        <constraint firstItem="4Z4-Eg-qUH" firstAttribute="top" secondItem="T9S-jW-6oz" secondAttribute="bottom" constant="80" id="5xa-ng-S0M"/>
+                        <constraint firstAttribute="trailing" secondItem="4Z4-Eg-qUH" secondAttribute="trailing" constant="98" id="6Dc-Wh-ePA"/>
+                        <constraint firstItem="T9S-jW-6oz" firstAttribute="centerX" secondItem="36d-n0-4eO" secondAttribute="centerX" id="7E6-64-LKi"/>
+                        <constraint firstItem="DYr-u1-7w5" firstAttribute="top" secondItem="4Z4-Eg-qUH" secondAttribute="bottom" constant="107" id="FHp-8q-EMG"/>
+                        <constraint firstItem="T9S-jW-6oz" firstAttribute="top" secondItem="36d-n0-4eO" secondAttribute="top" constant="72" id="lR8-mf-FMM"/>
+                        <constraint firstAttribute="trailing" secondItem="DYr-u1-7w5" secondAttribute="trailing" constant="125" id="s6y-tF-Omx"/>
+                        <constraint firstItem="DYr-u1-7w5" firstAttribute="leading" secondItem="36d-n0-4eO" secondAttribute="leading" constant="126" id="zCR-X7-X0c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="36d-n0-4eO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0D1-Qs-tF0"/>
+                <constraint firstItem="36d-n0-4eO" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="H6A-Ux-Hgq"/>
+                <constraint firstItem="36d-n0-4eO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YAX-qZ-1lb"/>
+                <constraint firstItem="36d-n0-4eO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ny4-wj-wPF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="152.47376311844079"/>
+        </view>
+        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="wRn-u7-pK3">
+            <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <nil key="textColor"/>
+            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+            <textInputTraits key="textInputTraits"/>
+            <point key="canvasLocation" x="90" y="-12"/>
+        </textField>
+    </objects>
+</document>
